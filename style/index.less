@@ -1,0 +1,182 @@
+@import url(../style/reset.css);
+
+//variaveis
+@font-face {
+    font-family:"bold";
+    src: url(../assets/font/B612-Bold.ttf);
+}
+@font-face {
+    font-family:"BoldItalic";
+    src: url(../assets/font/B612-BoldItalic.ttf);
+}
+@font-face {
+    font-family:"Italicb";
+    src: url(../assets/font/B612-Italic.ttf);
+}
+@font-face {
+    font-family:"Regular";
+    src: url(../assets/font/B612-Regular.ttf);
+}
+
+@blue:#0072D2;
+@yellow:#FFA800;
+@dark:#131318;
+@white:#fff;
+
+body{
+    overflow: hidden;
+}
+
+.flex{
+    display: flex;
+}
+
+.all{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(../assets/img/fundo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;    
+
+    .top{
+        width: 100%;
+        height: auto;
+        text-align: center;
+        color: @white;
+        font-family:"bold";
+
+        p{
+            font-size: 1.8em;
+            padding: 2em 0;
+        }
+
+        h2{
+            font-size: 8em;
+            padding: .2em 0;
+        }
+    }
+
+    .bottom{
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;      
+
+        .container{
+            display: flex;
+            flex-direction: row;  
+            gap: 60px;
+            align-items: center;
+            padding-top: 4em;
+            .cape{
+                img{
+                    width: 184px;
+                    height: 267px;
+                    border-radius: 20px;
+                }                
+            }    
+
+            .content{
+                display: flex;
+                flex-direction: column;                
+               
+
+                .description{
+                    color: @white;
+                    font-size: 1.5em;
+                    width: 826px;
+                    font-family:"Regular";
+                    padding-bottom: 1em;
+                }
+
+                .items{
+                    align-items: center;
+                    gap: 100px;
+                    .time{                             
+                        gap: 10px;                
+                        .clock{
+                            background-image:url(../assets/img/clock.svg);
+                            width: 33px;
+                            height: 31px;
+                            display: block;
+                            background-size: 100%;
+                        }
+                        span{
+                            color: @white;
+                            font-size: 1.5em;
+                            font-family:"bold";
+                        }
+                    }
+
+                    .stars{
+                        
+                        .icon{
+                            width: 33px;
+                            height: 31px;
+                            background-repeat: no-repeat;
+                            background-size: 100%;
+                            background-position: center;
+                            display: block;
+                        }
+
+                        .star{
+                            background-image: url(../assets/img/star.svg);
+                        }
+
+                        .star-v{
+                            background-image: url(../assets/img/star-v.svg);
+                        }
+                    }
+
+                    .year{
+                        font-size: 1.5em;
+                        font-family:"bold";
+                        color: @white;
+                    }
+                }
+
+                .button{
+                    gap: 30px;
+                    padding-top: 2em;
+
+                    a{
+                        padding: 14px;
+                        font-size: 1.2em;
+                        font-family:"bold";
+                        text-align: center;
+                        border-radius: 3px;
+                        color: @white; 
+                    }
+                    .watch-now{
+                        width: 184px;
+                        height: 52px;
+                        background-color: @blue;                                                                                           
+                    }
+
+                    .trailer{                       
+                        width: 115px;
+                        height: 52px;
+                        background-color: @dark;                 
+                        border:1px solid @white;                        
+                    }
+
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .all{
+        .bottom{
+            .container{
+                .cape{
+                    display: none;
+                }
+            }
+
+        }
+    }
+    
+}
