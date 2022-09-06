@@ -123,20 +123,121 @@ body {
   text-align: center;
   border-radius: 3px;
   color: #fff;
+  height: 52px;
 }
 .all .bottom .container .content .button .watch-now {
   width: 184px;
-  height: 52px;
   background-color: #0072D2;
 }
 .all .bottom .container .content .button .trailer {
   width: 115px;
-  height: 52px;
   background-color: #131318;
   border: 1px solid #fff;
+}
+.all .bottom .content-mobile {
+  display: none;
 }
 @media (max-width: 1024px) {
   .all .bottom .container .cape {
     display: none;
+  }
+  .all .bottom .container .content {
+    padding: 2em;
+    display: block;
+  }
+  .all .bottom .container .content .description {
+    width: 70%;
+    font-size: 1em;
+  }
+  .all .bottom .container .content .items .time {
+    align-items: center;
+  }
+  .all .bottom .container .content .items .time span {
+    font-size: 1em;
+  }
+  .all .bottom .container .content .items .year {
+    font-size: 1em;
+  }
+  .all .bottom .container .content .button a {
+    font-size: 1em;
+    padding: 10px;
+    height: 40px;
+  }
+  .all .bottom .container .content .button .watch-now {
+    width: 150px;
+  }
+  .all .bottom .container .content .button .trailer {
+    width: 100px;
+  }
+}
+@media (max-width: 570px) {
+  .all .bottom .container {
+    display: none;
+  }
+  .all .bottom .content-mobile {
+    display: block;
+  }
+  .all .bottom .content-mobile .items {
+    align-items: center;
+  }
+  .all .bottom .content-mobile .items .time {
+    gap: 10px;
+  }
+  .all .bottom .content-mobile .items .time .clock {
+    background-image: url(../assets/img/clock.svg);
+    width: 33px;
+    height: 31px;
+    display: block;
+    background-size: 100%;
+  }
+  .all .bottom .content-mobile .items .time span {
+    color: #fff;
+    font-size: 1.5em;
+    font-family: "bold";
+  }
+  .all .bottom .content-mobile .items .stars .icon {
+    width: 33px;
+    height: 31px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    display: block;
+  }
+  .all .bottom .content-mobile .items .stars .star {
+    background-image: url(../assets/img/star.svg);
+  }
+  .all .bottom .content-mobile .items .stars .star-v {
+    background-image: url(../assets/img/star-v.svg);
+  }
+  .all .bottom .content-mobile .items .year {
+    font-size: 1.5em;
+    font-family: "bold";
+    color: #fff;
+  }
+  .all .bottom .content-mobile .watch {
+    background-color: #19191F;
+    border-radius: 20px 20px 0px 0px;
+  }
+  .all .bottom .content-mobile .watch .button {
+    gap: 30px;
+    padding-top: 2em;
+  }
+  .all .bottom .content-mobile .watch .button a {
+    padding: 14px;
+    font-size: 1.2em;
+    font-family: "bold";
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;
+    height: 52px;
+  }
+  .all .bottom .content-mobile .watch .button .watch-now {
+    width: 184px;
+    background-color: #0072D2;
+  }
+  .all .bottom .content-mobile .watch .button .trailer {
+    width: 115px;
+    background-color: #131318;
+    border: 1px solid #fff;
   }
 }

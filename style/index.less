@@ -148,16 +148,15 @@ body{
                         text-align: center;
                         border-radius: 3px;
                         color: @white; 
+                        height: 52px;
                     }
                     .watch-now{
-                        width: 184px;
-                        height: 52px;
+                        width: 184px;                        
                         background-color: @blue;                                                                                           
                     }
 
                     .trailer{                       
-                        width: 115px;
-                        height: 52px;
+                        width: 115px;                        
                         background-color: @dark;                 
                         border:1px solid @white;                        
                     }
@@ -165,8 +164,13 @@ body{
                 }
             }
         }
+
+        .content-mobile{
+            display: none;
+        }
     }
 }
+//mobile
 @media (max-width: 1024px) {
     .all{
         .bottom{
@@ -174,9 +178,140 @@ body{
                 .cape{
                     display: none;
                 }
+
+                .content{
+                    padding: 2em;
+                    display: block;
+                    .description{
+                        width: 70%;
+                        font-size: 1em;
+                    }
+
+                    .items{
+                       
+                        .time{
+                            align-items: center;
+                            span{
+                                font-size: 1em;
+                            }
+                        }
+
+                        .year{
+                            font-size: 1em; 
+                        }
+                    }
+
+                    .button{
+                        a{
+                            font-size: 1em;
+                            padding: 10px;
+                            height: 40px;
+                        }
+                        .watch-now{
+                            width: 150px;
+                        }
+
+                        .trailer{
+                            width: 100px;
+                        }
+                    }
+                }
             }
 
         }
+    }
+    
+}
+
+@media (max-width: 570px) {
+    
+    .all{
+        .bottom{
+            .container{
+                display: none;
+            }
+
+            .content-mobile{
+                display: block;
+                .items{
+                    align-items: center;
+                    //gap: 100px;
+                    .time{                             
+                        gap: 10px;                
+                        .clock{
+                            background-image:url(../assets/img/clock.svg);
+                            width: 33px;
+                            height: 31px;
+                            display: block;
+                            background-size: 100%;
+                        }
+                        span{
+                            color: @white;
+                            font-size: 1.5em;
+                            font-family:"bold";
+                        }
+                    }
+
+                    .stars{
+                        
+                        .icon{
+                            width: 33px;
+                            height: 31px;
+                            background-repeat: no-repeat;
+                            background-size: 100%;
+                            background-position: center;
+                            display: block;
+                        }
+
+                        .star{
+                            background-image: url(../assets/img/star.svg);
+                        }
+
+                        .star-v{
+                            background-image: url(../assets/img/star-v.svg);
+                        }
+                    }
+
+                    .year{
+                        font-size: 1.5em;
+                        font-family:"bold";
+                        color: @white;
+                    }
+                }
+
+                .watch{
+                    background-color: #19191F;
+                    border-radius: 20px 20px 0px 0px;
+                    .button{
+                        gap: 30px;
+                        padding-top: 2em;
+    
+                        a{
+                            padding: 14px;
+                            font-size: 1.2em;
+                            font-family:"bold";
+                            text-align: center;
+                            border-radius: 3px;
+                            color: @white; 
+                            height: 52px;
+                        }
+                        .watch-now{
+                            width: 184px;                        
+                            background-color: @blue;                                                                                           
+                        }
+    
+                        .trailer{                       
+                            width: 115px;                        
+                            background-color: @dark;                 
+                            border:1px solid @white;                        
+                        }
+    
+                    }
+                }
+                
+            }
+        }
+
     }
     
 }
